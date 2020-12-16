@@ -1,0 +1,96 @@
+.popup-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(225, 222, 255, 0.6);
+  z-index: 80;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 8rem;
+  width: 13rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 12px 6px #897b7b;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.popup-text {
+}
+
+.popup-btn-left {
+  position: absolute;
+  bottom: 0;
+  left: .3rem;
+}
+
+.popup-btn-right {
+  position: absolute;
+  bottom: 0;
+  right: .3rem;
+}
+
+// Confirmation popup
+.confirm-popup {
+  position: absolute;
+  top: 5rem;
+  right: -10rem;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  background-color: rgb(158, 176, 255);
+  transition: 1s cubic-bezier(0.47, 0, 0, 1.22) all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swing-in {
+  right: -0.5rem;
+}
+
+@keyframes swingback {
+  0% {
+    transform: rotateX(0deg) scale(0.8);
+    top: 5rem;
+  }
+  15% {
+    transform: rotateX(30deg) rotate(20deg);
+    top: 3rem;
+    right: 1rem;
+  }
+  30% {
+    transform: rotateX(-30deg) rotate(-20deg);
+  }
+  45% {
+    transform: rotateY(10deg) rotate(0deg);
+  }
+  60% {
+    transform: rotateX(60deg) scale(0.8);
+    right: 4rem;
+  }
+  70% {
+    transform: rotateX(-60deg) rotateY(70deg);
+    right: 0rem;
+  }
+  100% {
+    transform: rotateX(60deg) rotate(180deg) scale(1.2);
+    top: 100vh;
+    right: 3rem;
+  }
+}
+
+.swing-back {
+  animation: swingback 1s linear forwards;
+}
